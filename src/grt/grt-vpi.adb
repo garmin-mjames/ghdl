@@ -1566,7 +1566,7 @@ package body Grt.Vpi is
 
    -- int vpi_get_vlog_info(p_vpi_vlog_info vlog_info_p)
    function vpi_get_vlog_info (info : p_vpi_vlog_info) return integer is
-       function To_Address is new Ada.Unchecked_Conversion
+      function To_Address is new Ada.Unchecked_Conversion
          (Source => Grt.Options.Argv_Type, Target => System.Address);
    begin
       if Flag_Trace then
